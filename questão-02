@@ -1,0 +1,24 @@
+<?php
+
+$number = readline('Digite um número: ');
+
+$number = 12;
+$firstNumber = 0;
+$secondNumber = 1;
+
+$nextNumber = $firstNumber + $secondNumber;
+$result = "Não pertence";
+
+while($nextNumber < $number) {
+    $firstNumber = $secondNumber;
+    $secondNumber = $nextNumber;
+    $nextNumber = $firstNumber + $secondNumber;
+}
+
+if($nextNumber == $number) {
+    $result = "Pertence";
+}
+
+echo "O número ".$number." ".$result." à sequência de Fibonacci.";
+
+?>
