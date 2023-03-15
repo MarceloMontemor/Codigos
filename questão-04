@@ -1,0 +1,26 @@
+<?php
+
+$sp = 67836.43;
+$rj = 36678.66;
+$mg = 29229.88;
+$es = 27165.48;
+$outros = 19849.53;
+
+$total = $sp + $rj + $mg + $es + $outros;
+
+$spPercentual = ($sp / $total) * 100;
+$rjPercentual = ($rj / $total) * 100;
+$mgPercentual = ($mg / $total) * 100;
+$esPercentual = ($es / $total) * 100;
+$outrosPercentual = ($outros / $total) * 100;
+
+echo "SP: " . $spPercentual . "%";
+echo "RJ: " . $rjPercentual . "%";
+echo "MG: " . $mgPercentual . "%";
+echo "ES: " . $esPercentual . "%";
+echo "Outros: " . $outrosPercentual . "%";
+
+
+
+
+?>
