@@ -1,0 +1,51 @@
+<?php
+$faturamento = [
+    "1" => 545.45,
+    "2" => 454.67,
+    "3" => 987.89,
+    "4" => 876.56,
+    "5" => 765.55,
+    "6" => 789.89,
+    "7" => 876.98,
+    "8" => 987.65,
+    "9" => 543.43,
+    "10" => 876.45,
+    "11" => 765.45,
+    "12" => 543.09,
+    "13" => 876.90,
+    "14" => 456.90,
+    "15" => 876.87,
+    "16" => 754.87,
+    "17" => 876.98,
+    "18" => 987.90,
+    "19" => 876.90,
+    "20" => 876.76,
+    "21" => 756.87,
+    "22" => 876.65,
+    "23" => 987.90,
+    "24" => 876.87,
+    "25" => 987.90,
+    "26" => 876.90,
+    "27" => 543.09,
+    "28" => 876.90,
+    "29" => 456.90,
+    "30" => 876.87,
+];
+
+$faturamento_total = array_sum($faturamento);
+$media_mensal = $faturamento_total/count($faturamento);
+
+$menor_valor = min($faturamento);
+$maior_valor = max($faturamento);
+
+$dias_acima_media = 0;
+foreach($faturamento as $valor){
+    if($valor > $media_mensal){
+        $dias_acima_media++;
+    }
+}
+
+echo "O menor valor de faturamento ocorrido em um dia do mês é: ".$menor_valor;
+echo "\nO maior valor de faturamento ocorrido em um dia do mês é: ".$maior_valor;
+echo "\nNúmero de dias no mês em que o valor de faturamento diário foi superior à média mensal: ".$dias_acima_media;
+?>
